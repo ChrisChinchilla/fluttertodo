@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:fluttertodo/app_state.dart';
 import 'package:provider/provider.dart';
 import 'package:fluttertodo/response_display.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart' as DotEnv;
 
-void main() {
+Future main() async {
+  // NOTE: The filename will default to .env and doesn't need to be defined in this case
+  await DotEnv.load();
   runApp(ToDoapp());
 }
 
