@@ -12,10 +12,14 @@ class ToDoapp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         title: 'To Dos',
-        home: ChangeNotifierProvider<AppState>(
-          builder: (_) => AppState(),
+        home: ChangeNotifierProvider(
+          create: (context) => AppState(),
           child: ToDoList(),
         ));
+    // home: ChangeNotifierProvider<AppState>(
+    //   builder: (_) => AppState()
+    //   child: ToDoList(),
+    // ));
   }
 }
 
@@ -33,7 +37,7 @@ class ToDoList extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
-                RaisedButton(
+                ElevatedButton(
                   onPressed: () => appState.fetchData(),
                   child: Text("Fetch To Dos"),
                 ),

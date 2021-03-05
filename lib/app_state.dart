@@ -3,8 +3,7 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 class AppState with ChangeNotifier {
-
-  String _dataUrl = "https://api.trello.com/1/members/chrischinchilla/cards?filter=visible&key=13f8c59607ba6d82531d3db5f46999c1&token=1f1de99d152dbb70bf94210eb8fb588b136f60282cd3e6e5ae4d7380a19dae9f";
+  String _dataUrl = "";
 
   AppState();
   String _jsonResponse = "";
